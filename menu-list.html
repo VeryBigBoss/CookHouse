@@ -1,0 +1,116 @@
+<?php
+    session_start();
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1">
+    <title>Вкуснодом</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">-->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper-header-inner">
+    <header class="header-inner">
+        <div class="header-fixed">
+            <nav class="navigation-top">
+                <ul>
+                    <li class="active"><a class="navigation-top-item" href="#">Меню</a></li>
+                    <li><a id="entryGuestLink" class="navigation-top-item" href="offer-steps.html">Записаться в гости
+                        <!--<span class="offer-count">1</span>-->
+                    </a></li>
+                </ul>
+                <div class="wrapper-logotype">
+                    <a href="index.html">
+                        <img src="img/vkusnodom.png" width="215" height="54">
+                    </a>
+                </div>
+                <div class="enter-block">
+                    <span></span>
+                    <!--<a class="enter-link" href="#">Войти</a>-->
+                </div>
+                <button class="navigation-top-trigger"><span></span></button>
+                <!--<div class="menu-dropdown">-->
+                <!--<ul>-->
+                <!--<li><a class="navigation-top-item" href="#">Меню</a></li>-->
+                <!--<li><a class="navigation-top-item" href="offer-steps.html">Записаться в гости</a></li>-->
+                <!--</ul>-->
+
+                <!--</div>-->
+            </nav>
+        </div>
+    </header>
+</div>
+<main>
+    <div class="wrapper-title">
+        <h2 class="section-header">Первые блюда</h2>
+    </div>
+    <div class="wrapper-food-list">
+        <?php
+            require ("foodList.php");
+            echo getFood(1);
+        ?>
+        <!--<section class="food-card-item">-->
+            <!--<div class="wrapper-z-index">-->
+                <!--<div class="wrapper-food-img">-->
+                    <!--<img src="img/soup.jpg" width="235" height="auto">-->
+                <!--</div>-->
+                <!--<div class="wrapper-food-title">-->
+                    <!--<h4 class="food-title">Щи из очень вкусной капусты</h4>-->
+                <!--</div>-->
+                <!--<p class="food-composition"><i>Состав</i>: картошка, вода, соль, пере, лапша, и-->
+                    <!--много других полезных игредиентов.</p>-->
+            <!--</div>-->
+            <!--<div class="wrapper-form-submit">-->
+                <!--<form name="food-card-item-id" action="foodListSelected.php" method="post">-->
+                    <!--<button class="eat-title-submit" type="button">-->
+                        <!--<input class="input-checkbox" type="checkbox" name="eat-title-boolean[]" id="eat-title"-->
+                               <!--onclick="isCookies()">-->
+                        <!--<input name="foodId" value="1" hidden>-->
+                        <!--<div class="wrapper-input-checkbox">-->
+                            <!--<label class="button-choose" for="eat-title">Выбрать</label>-->
+                            <!--<label class="button-cancel" for="eat-title">Отменить</label>-->
+                        <!--</div>-->
+                    <!--</button>-->
+                <!--</form>-->
+            <!--</div>-->
+        <!--</section>-->
+    </div>
+    <div class="wrapper-title">
+        <h2 class="section-header">Вторые блюда</h2>
+    </div>
+    <div class="wrapper-food-list">
+        <?php
+            echo getFood(2);
+        ?>
+    </div>
+    <div class="wrapper-title">
+        <h2 class="section-header">Гарниры</h2>
+    </div>
+    <div class="wrapper-food-list">
+        <?php
+            echo getFood(3);
+        ?>
+    </div>
+    <div class="wrapper-title">
+        <h2 class="section-header">Салаты</h2>
+    </div>
+    <div class="wrapper-food-list">
+        <?php
+            echo getFood(4);
+        ?>
+    </div>
+    <div class="wrapper-title">
+        <h2 class="section-header">Сладенькое</h2>
+    </div>
+    <div class="wrapper-food-list">
+        <?php
+            echo getFood(5);
+        ?>
+    </div>
+</main>
+<script src="js/js.js"></script>
+</body>
+</html>

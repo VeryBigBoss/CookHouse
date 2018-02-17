@@ -1,0 +1,92 @@
+<?php
+    session_start();
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1">
+    <title>Вкуснодом</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/datepicker.css" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">-->
+    <link href="css/style.css" rel="stylesheet">
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/datepicker.js"></script>
+</head>
+<body>
+
+<div class="wrapper-header-inner ">
+    <header class="header-inner">
+        <div class="header-fixed">
+            <nav class="navigation-top">
+                <ul>
+                    <li><a class="navigation-top-item" href="menu-list.html">Меню</a></li>
+                    <li class="active"><a id="entryGuestLink" class="navigation-top-item" href="#">Записаться в гости</a></li>
+                </ul>
+                <div class="wrapper-logotype">
+                    <a href="index.html">
+                        <img src="img/vkusnodom.png" width="215" height="54">
+                    </a>
+                </div>
+                <div class="enter-block">
+                    <span></span>
+                    <!--<a class="enter-link" href="#">Войти</a>-->
+                </div>
+                <button class="navigation-top-trigger"><span></span></button>
+            </nav>
+        </div>
+    </header>
+</div>
+<main>
+    <div class="wrapper-form">
+        <form action="send.php" method="post">
+
+            <div class="step-item">
+                <div class="wrapper-step-item-header">
+                    <h2 class="step-item-header">Введите ваши данные и проверьте заказ</h2>
+                </div>
+                <div class="wrapper-input-personal">
+                    <div class="wrapper-row-personal">
+                        <label class="input-label" for="first-name">Имя</label>
+                        <input id="first-name" class="input-personal" type="text" name="first-name" required>
+                    </div>
+                    <div class="wrapper-row-personal">
+                        <label class="input-label" for="email">Почтовый ящик</label>
+                        <input id="email" class="input-personal" type="email" name="email" required>
+                    </div>
+                    <div class="wrapper-row-personal">
+                        <!--<div class="row-date-time">-->
+                        <label for="date" class="input-label">Дата</label>
+                        <input id="date" class="input-personal datepicker-here" data-position="right top" type="date" name="date" required>
+                        <!--<input type="text" class="datepicker-here">-->
+                    </div>
+                    <div class="wrapper-row-personal">
+                        <label for="time" class="input-label">Время</label>
+                        <input id="time" class="input-personal" type="time" name="time" required>
+                    </div>
+                </div>
+                <div id="wrapper-column-menu-id" class="wrapper-column-menu">
+                    <?php
+                         include ('foodListSelected.php');
+                    ?>
+
+                    <script src="js/js.js"></script>
+                    <script type="text/javascript">
+                        foodListSelected();
+                    </script>
+                </div>
+                <a class="btn-back" href="menu-list.html">Вернуться к выбору меню</a>
+            </div>
+            <input class="button-submit" type="submit" onclick="removeAllSession()">
+        </form>
+    </div>
+    <div class="wrapper-send-result hidden">
+        <h1 class="header-order">Ваша запись успешно сохранена!</h1>
+        <p class="text-order">В ближайшее время мы с Вами свяжемся.</p>
+    </div>
+    <div class="overflow-disabled hidden"></div>
+</main>
+</body>
+</html>

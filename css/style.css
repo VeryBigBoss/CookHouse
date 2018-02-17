@@ -1,0 +1,1315 @@
+body {
+  font-family: "Times New Roman", "Arial", sans-serif;
+  min-height: 100vh; /*ширина и высота как в HTMLAcademy*/
+  min-width: 320px; /*ширина и высота как в HTMLAcademy*/
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  outline: 2px solid red;
+}
+
+.welcome-page {
+  position: relative;
+  /*display: block;*/
+  height: 100vh;
+  min-width: 320px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  background:  #333333 url("../img/cake.jpg") no-repeat center;
+  background-size: cover;
+  outline: 10px solid #0400be;
+}
+
+.welcome-page .header {
+  display: flex;
+  justify-content: center;
+  min-height: 115px;
+  /*outline: 1px solid black;*/
+}
+
+.welcome-page .header .navigation-top {
+  display: flex;
+  align-items: center;
+  width: 675px;
+  max-width: 675px;
+  /*outline: 1px solid black;*/
+}
+
+.welcome-page .header .enter-block {
+  max-width: 120px;
+  margin-left: auto;
+  /*outline: 1px solid black;*/
+}
+
+.welcome-page .header .enter-link {
+  transition: 0.3s;
+}
+
+.welcome-page .header .enter-link:hover {
+  transform: scale(1.1);
+  /*font-size: 28px;*/
+  transition: 0.3s;
+}
+
+.welcome-page .header .enter-link:active {
+  opacity: 0.5;
+}
+
+.welcome-page main {
+  /*position: relative;*/
+  display: block;
+  text-align: center;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  /*min-width: 1200px;*/ /*из-за этого при уменьшении страницы справа у body был непонятный отступ*/
+  height: 88vh;
+  /*outline: 2px solid green;*/
+}
+
+.welcome-page main .wrapper {
+  position: absolute;
+  /*display: inline-block;*/
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /*display: block;*/
+  margin: auto;
+  height: 101px;
+  width: 320px;
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*background-color: grey;*/
+  /*outline: 1px solid black;*/
+}
+
+a {
+  text-decoration: none;
+}
+
+.welcome-page main .button {
+  display: inline-block;
+  min-height: 34px;
+  min-width: 280px;
+  max-width: 317px;
+  padding: 3px 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  /*background: #8f99cd;*/
+  border-radius: 20px;
+  /*border: 1px solid #fdff51;*/
+  border: 2px solid #0400be;
+  transition: 0.3s;
+}
+
+.welcome-page main .button:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+.welcome-page main .button:active {
+  transform: scale(1);
+  transition: 0.3s;
+}
+
+.font-style-italic {
+  font-style: italic;
+}
+
+.font-yellow {
+  color: #fdff51;
+}
+
+.font-blue {
+  color: #0400be;
+}
+
+/*.welcome-page .background-image {
+  position: absolute;
+}*/
+
+/*--------- Страница menu-list --------------*/
+.wrapper-header-inner {
+  position: relative;
+  min-height: 65px;
+  z-index: 900;
+  box-shadow: 0 3px 25px 5px #c5c5c5;
+}
+
+.header-inner {
+  /*position: relative;*/
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: block;
+  min-height: 65px;
+  width: 100%;
+  /*max-width: 1200px;*/
+  margin: 0 auto;
+  /*padding-left: 25px;*/
+  /*padding-right: 25px;*/
+  background-color: #fff;
+  box-sizing: border-box; /*для того, чтобы паддинги учитывались в общей ширине*/
+  box-shadow: 0 3px 25px 5px #c5c5c5;
+  /*outline: 1px solid black;*/
+  z-index: 10;
+}
+
+.header-fixed {
+  position: relative;
+  min-height: 65px;
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 0 auto;
+  z-index: 2;
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  box-sizing: border-box;
+  /*justify-content: space-between;*/
+  /*outline: 1px solid black;*/
+}
+
+.navigation-top {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 65px;
+  font-size: 20px;
+  /*outline: 2px solid red;*/
+  /*background-color: darkgoldenrod;*/
+}
+
+.navigation-top ul {
+  display: inline-block;
+  /*display: flex;*/
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /*outline: 1px solid black;*/
+}
+
+ul li:not(:first-child) {
+  margin-left: 30px;
+}
+
+.navigation-top li {
+  position: relative;
+  display: inline-block;
+  /*outline: 1px solid black*/
+}
+
+.header-inner .enter-link,
+.navigation-top-item {
+  position: relative;
+  display: inline-block;
+  padding: 5px 0;
+  height: 25px;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: center;
+  color: #000;
+  /*outline: 1px solid black;*/
+}
+
+.enter-link:hover,
+li:not(.active) .navigation-top-item:hover {
+  color: #0345ed;
+}
+
+.enter-link:active,
+li:not(.active) .navigation-top-item:active {
+  color: #0345ed;
+  opacity: 0.5;
+}
+
+.active .navigation-top-item {
+  opacity: 0.5;
+}
+
+.active .navigation-top-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: red;
+}
+
+.offer-count {
+  position: absolute;
+  top: -3px;
+  right: -12px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  font-size: 15px;
+  color: white;
+  border-radius: 50%;
+  border: 1px solid red;
+  background-color: red;
+  /*outline: 1px solid black;*/
+}
+
+.wrapper-logotype {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: -14.5%; bottom: 0; right: 0;
+  /*left: 0;*/
+  /*right: 0;*/
+}
+
+.wrapper-title {
+  display: inline-block;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 25px;
+  line-height: 34px;
+  box-sizing: border-box;
+  /*outline: 1px solid black;*/
+}
+
+/*------ Вариант подчеркивания без флексов ------*/
+.wrapper-title {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.wrapper-title:after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -70px;
+  border-bottom: 2px solid black;
+  z-index: 1;
+}
+
+.section-header {
+  position: relative;
+  display: inline-block;
+  margin: 55px 0;
+  padding: 0 20px;
+  background: #fff;
+  z-index: 2;
+}
+/*-----------------------------------------------*/
+
+/*----- Вариант заднего подчеркивания на флексах -----*/
+/*.section-header {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.section-header:after,
+.section-header:before {
+  content: "";
+  flex-grow: 1;
+  width: 50px;
+  height: 2px;
+  background: black;
+}
+
+.section-header:before {
+  margin-right: 25px;
+}
+
+.section-header:after {
+  margin-left: 25px;
+}*/
+/*----------------------------------------------*/
+
+
+.wrapper-food-list {
+  display: inline-block;
+  text-align: left;
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  /*justify-content: space-between;*/
+  /*flex-wrap: wrap;*/
+  margin-left: auto;
+  margin-right: auto;
+  /*padding: 0 0 0 20px;*/
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  /*outline: 1px solid black;*/
+}
+
+/* --------- делаем красивую сетку а резиновой верстке ---------- */
+.wrapper-food-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px); /* или repeat(auto-fit, 100px); */
+  justify-content: center; /* или space-between, или space-evenly, можно и space-around */
+}
+/* -------------------------------------------------------------- */
+
+.food-card-item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin: 0 10px 40px;
+  padding: 0 3px;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+  /*margin-bottom: 20px;*/
+  /*margin-right: 20px;*/
+  /*width: 100%;*/
+  max-width: 240px;
+  min-height: 320px;
+  border-radius: 5px;
+  border: 2px solid #f2f1f1;
+  background-color: white;
+  z-index: 100;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.food-card-item:hover {
+  border: 2px solid #fff;
+  box-shadow: 0 7px 25px 8px #d4d4d4;
+  transition: 0.3s;
+}
+
+.wrapper-form-submit {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 28px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  transition: 0.3s;
+}
+
+.eat-title-submit {
+  font-family: inherit;
+  visibility: hidden;
+}
+
+.input-checkbox:not(:checked) ~ .wrapper-input-checkbox {
+  bottom: 14px;
+}
+
+.input-checkbox:checked ~ .wrapper-input-checkbox {
+  bottom: -16px;
+}
+
+.food-card-item:hover > .wrapper-input-checkbox {
+  bottom: -16px;
+  transition: 0.3s;
+}
+
+.food-card-item:hover > .wrapper-form-submit .wrapper-input-checkbox {
+  bottom: -16px;
+  transition: 0.3s;
+}
+
+
+.wrapper-z-index {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0 3px;
+  z-index: 100;
+  background-color: white;
+}
+
+.wrapper-food-img {
+  display: inline-block;
+  margin-top: 3px;
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*margin-top: auto;*/
+  /*margin-bottom: auto;*/
+  width: 100%;
+  max-width: 235px;
+  height: 185px;
+  /*Высота строки = высоте родительского контейнера (для дальнейшего выравнивания по вертикали)*/
+  line-height: 175px;
+  /*outline: 1px solid black;*/
+}
+
+.wrapper-food-img img {
+  width: 100%;
+  height: auto;
+  /*margin: 0 auto;*/
+  vertical-align: middle;
+}
+
+.wrapper-food-title {
+  display: inline-block;
+  min-height: 50px;
+  max-width: 235px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.food-title {
+  font-size: 22px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  margin: 0;
+}
+
+.food-composition {
+  /*display: inline-block;  ??? */
+  max-width: 235px;
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  color: dimgray;
+  /*outline: 1px solid black;*/
+}
+
+.food-card-item:hover .food-composition {
+  color: black;
+}
+
+/*--------- страница offer-steps -----------*/
+.wrapper-form {
+  display: inline-block;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 30px auto;
+  /*white-space: nowrap;*/
+  box-sizing: border-box;
+  /*outline: 1px solid green;*/
+}
+
+.wrapper-overflow {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: inline-block;
+  /*white-space: nowrap;*/
+  /*display: flex;*/
+  /*align-items: flex-start;*/
+  /*flex-wrap: nowrap;*/
+  /*flex-direction: row;*/
+  overflow: hidden;
+  /*outline: 1px solid cornflowerblue;*/
+}
+
+.radio-toggle {
+  display: none;
+}
+
+.label-step {
+  width: 80px;
+  margin: 0 5px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #ef6c81;
+  background: antiquewhite;
+}
+
+.label-step:hover {
+  cursor: pointer;
+  box-shadow: 0 5px 15px 1px rgba(100, 10, 100, 0.5);
+}
+
+.label-step-1,
+.label-step-2,
+.label-step-3 {
+  position: absolute;
+  top: 60px;
+  z-index: 9;
+}
+
+.label-step-2,
+.label-step-3 {
+  right: 0;
+}
+
+#step-1:checked ~ .step-item {
+  transform: translateX(0);
+  max-height: 550px;
+  transition: 0.4s;
+}
+
+#step-1:checked ~ .label-step-3,
+#step-1:checked ~ .label-step-1 {
+  visibility: hidden;
+}
+
+#step-2:checked ~ .step-item {
+  transform: translateX(-100%);
+  transition: 0.4s;
+}
+
+#step-2:checked ~ .label-step-2 {
+  visibility: hidden;
+}
+
+#step-3:checked ~ .step-item {
+  transform: translateX(-200%);
+  max-height: 480px;
+  transition: 0.4s;
+}
+
+#step-3:checked ~ .label-step-2 {
+  left: 0;
+}
+
+#step-3:checked ~ .label-step-1,
+#step-3:checked ~ .label-step-3 {
+  visibility: hidden;
+}
+
+.button-prev-step,
+.button-next-step {
+  position: absolute;
+  top: 42px;
+  width: 90px;
+  height: 60px;
+  z-index: 9;
+  text-align: center;
+  background: #fff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  /*outline: 1px solid black;*/
+}
+
+.button-next-step {
+  right: 0;
+}
+
+.button-next-step img,
+.button-prev-step img {
+  width: 100%;
+  height: auto;
+}
+
+.button-prev-step img {
+  transform: rotate(180deg);
+}
+
+.button-prev-step:hover,
+.button-next-step:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.button-prev-step:active,
+.button-next-step:active {
+  transform: scale(1);
+  transition: 0.2s;
+}
+
+
+
+.step-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  text-align: center;
+  /*outline: 1px solid black;*/
+}
+
+.step-item:last-child {
+  margin-bottom: 200px;
+}
+
+.wrapper-step-item-header {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  z-index: 1;
+  /*outline: 1px solid red;*/
+}
+
+.step-item-header {
+  /*position: relative;*/
+  display: inline-block;
+  padding: 0;
+  margin: 0 0 30px 0;
+  /*font-size: 24px;*/
+  text-align: center;
+  white-space: pre-wrap;
+}
+
+.wrapper-form .button {
+  position: absolute;
+  display: inline-block;
+  z-index: 2;
+}
+
+.button-prev {
+  /*position: absolute;*/
+  left: 0;
+}
+
+.button-next {
+  right: 0;
+}
+
+.wrapper-calendar {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 0;
+  outline: 1px solid brown;
+}
+
+.table-calendar {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.table-calendar-header {
+  position: relative;
+  height: 40px;
+  padding: 5px 0;
+  background: #ef6c81;
+  /*outline: 1px solid black;*/
+}
+
+.prev-month,
+.next-month {
+  position: absolute;
+  height: inherit;
+  width: 60px;
+  border: none;
+  transform: scale(0.5);
+  /*background: url("../img/icon-left.png") no-repeat center;*/
+}
+
+.prev-month {
+  left: 0;
+  background: url("../img/icon-left.png") no-repeat center;
+}
+
+.next-month {
+  right: 0;
+  background: url("../img/icon-right.png") no-repeat center;
+}
+
+.prev-month:hover {
+  transform: scale(0.7);
+}
+
+.month-title {
+  font-size: 38px;
+  line-height: 38px;
+}
+
+.name-day-of-week,
+.number-of-month {
+  width: 55px;
+  height: 30px;
+  padding: 10px 10px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.name-day-of-week {
+  opacity: 0.5;
+}
+
+.number-of-month {
+  font-family: "Segoe Print", "Times New Roman", "Arial";
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.number-of-month:hover {
+  position: relative;
+  background-color: cadetblue;
+  cursor: pointer;
+}
+
+.selected-day {
+  background-color: hotpink;
+}
+
+.label-date-time {
+  position: relative;
+  display: inline-block;
+  margin-right: 15px;
+  text-align: right;
+  width: 80px;
+}
+
+.label-date-time:after {
+  content: "*";
+  position: absolute;
+  right: -12px;
+  color: red;
+}
+
+.date-time {
+  display: inline-block;
+  height: 30px;
+  width: 250px;
+  padding: 5px 10px;
+}
+
+/*.button-next-step {*/
+  /*display: block;*/
+  /*top: 55px;*/
+  /*right: 0;*/
+  /*!*top: 0;*!*/
+/*}*/
+
+/*.button-next-step:hover {*/
+  /*cursor: pointer;*/
+/*}*/
+
+/*.button-next-step:active {*/
+
+/*}*/
+
+/*.button-next-step:active ~ .step-item:nth-child(n),*/
+/*.button-next-step:active ~ .second-step-item:nth-child(n) {*/
+  /*transform: translate(-1200px, 0);*/
+/*}*/
+
+/*.button-next-step:active ~ .second-step-item:nth-child(n) {*/
+  /*overflow: visible;*/
+/*}*/
+
+.red-star {
+  color: red;
+}
+
+.text-under-date {
+  /*display: inline;*/
+  /*max-width: 50px;*/
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 2px;
+}
+
+.btn-back {
+  font-size: 20px;
+  line-height: 20px;
+  vertical-align: middle;
+  text-decoration: underline;
+}
+
+/*----------- Второй шаг - выбор меню ------------*/
+.wrapper-column-menu {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  max-width: 1200px;
+  /*font-size: 0;*/
+  /*outline: 2px solid black;*/
+}
+
+.column-menu-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 17.5%;
+  height: 100%;
+  padding: 0 1%;
+  /*outline: 1px solid red;*/
+}
+
+.column-menu-item-header {
+  min-height: 55px;
+  line-height: 28px;
+  text-align: center;
+  margin: 10px 0;
+  white-space: pre-wrap;
+}
+
+.menu-item-card {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 1%;
+  margin: 10px;
+  min-height: 175px;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+  box-sizing: content-box;
+  /*outline: 1px solid black;*/
+}
+
+.menu-item-card:hover {
+  border-color: blue;
+}
+
+.menu-item-card-img {
+  display: inline-block;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  width: 100%;
+  height: 140px;
+  line-height: 140px;
+  /*height: 100%;*/
+  margin-left: auto;
+  margin-right: auto;
+  /*outline: 1px solid black;*/
+}
+
+.menu-item-card-img img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.wrapper-card-title {
+  min-height: 36px;
+  max-width: 100%;
+  margin: 15px 0;
+  vertical-align: middle;
+  /*outline: 1px solid black;*/
+}
+
+.menu-item-card-title {
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  max-width: 100%;
+  min-height: 36px;
+  margin: 0;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  white-space: pre-wrap;
+  vertical-align: middle;
+  /*outline: 1px solid black;*/
+}
+
+.menu-item-card-delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  font-size: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.menu-item-card-delete:before,
+.menu-item-card-delete:after {
+  position: absolute;
+  top: 10px;
+  right: 2px;
+  content: "";
+  display: block;
+  height: 4px;
+  width: 21px;
+  background-color: red;
+}
+
+.menu-item-card-delete::before {
+  transform: rotate(-45deg);
+}
+
+.menu-item-card-delete::after {
+  transform: rotate(45deg);
+}
+
+.menu-item-card-delete:hover {
+  transform: rotate(90deg);
+  /*transform: scale(1.1);*/
+  transition: 0.2s;
+}
+
+.wrapper-input-checkbox {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 14px;
+  margin: 0 auto;
+  z-index: 90;
+  transition: 0.3s;
+  /*outline: 1px solid black;*/
+}
+
+.input-checkbox {
+  /*display: none;*/
+  visibility: hidden;
+}
+
+.button-choose,
+.button-cancel {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  line-height: 18px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.button-choose:hover,
+.button-cancel:hover {
+  cursor: pointer;
+}
+
+.button-choose:active,
+.button-cancel:active {
+  cursor: pointer;
+  /*box-shadow: inset 0 0 0 2px #a1a1a1;*/
+}
+
+.input-checkbox:checked ~ .wrapper-input-checkbox .button-cancel {
+   visibility: visible;
+  background: springgreen;
+  /*display: inline-block;*/
+}
+
+.input-checkbox:not(:checked) ~ .wrapper-input-checkbox .button-choose {
+  visibility: visible;
+  background: tomato;
+  /*display: inline-block;*/
+}
+
+/*-------------- Шаг 3 - ввод персональных данных ------------*/
+
+.wrapper-input-personal {
+  display: inline-block;
+  /*width: auto;*/
+  /*width: 100%;*/
+  max-width: 657px;
+  margin: 0 auto;
+  text-align: left;
+  /*outline: 1px solid black;*/
+}
+
+.wrapper-row-personal {
+  position: relative;
+  display: inline-block;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  vertical-align: middle;
+  text-align: center;
+  /*outline: 1px solid black;*/
+}
+
+.input-label {
+  position: relative;
+  /*left: -10px;*/
+  /*top: 3px;*/
+  display: inline-block;
+  vertical-align: top;
+  width: 170px;
+  margin-right: 10px;
+  line-height: 37px;
+  text-align: right;
+  /*outline: 1px solid black;*/
+}
+
+.input-label:after {
+  content: "*";
+  position: absolute;
+  right: -15px;
+  color: red;
+}
+
+.input-personal {
+  width: 250px;
+  height: 25px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.input-personal:hover {
+  border-color: cornflowerblue;
+}
+
+.input-personal:hover ~ .input-label {
+  /*color: cornflowerblue;*/
+}
+
+.input-personal:focus {
+  border-color: #0400be;
+  box-shadow: 0 0 15px 1px #ef6c81;
+  outline: none;
+}
+
+.input-personal:focus ~ .input-label {
+  color: cornflowerblue;
+}
+
+.button-submit {
+  width: 270px;
+  font-size: 18px;
+  line-height: 26px;
+  border-radius: 5px;
+  font-family: "Times New Roman", "Arial", sans-serif;
+  border: 1px solid #c0c0c0;
+  background: mediumspringgreen;
+  transition: 0.2s;
+}
+
+.button-submit:hover {
+  /*font-family: "Segoe Print", "Times New Roman", "Arial";*/
+  border-color: #c0c0c0;
+  box-shadow: 0 3px 10px 3px #c0c0c0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.button-submit:active {
+  box-shadow: 0 0 10px 1px #c0c0c0;
+  outline: none;
+}
+
+/*-------------------- Всплывающее окно после отправвки заказа ----------------------*/
+.wrapper-send-result {
+  position: absolute;
+  left: 50%;
+  top: 300px;
+  margin: 0 0 0 -400px;
+  width: 800px;
+  height: 200px;
+  background: white;
+  z-index: 11;
+}
+
+.overflow-disabled {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+/*-------------- Отображение увежомления об успешном завершении сохранения записи ------------*/
+.wrapper-order {
+  width: 800px;
+  margin: 100px auto 0;
+}
+
+.header-order,
+.wrapper-order {
+  text-align: center;
+}
+
+.return-menu-list {
+  font-size: 16px;
+  line-height: 16px;
+  color: darkorchid;
+  border-bottom: 1px dotted darkorchid;
+}
+
+/*----------------- Медиа запросы --------------------*/
+
+@media screen and (min-width: 768px) {
+  .navigation-top-trigger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation-top ul,
+  .enter-block {
+    display: none;
+  }
+
+  .wrapper-logotype {
+    width: 130px;
+    height: 40px;
+    margin: auto 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    /*outline: 1px solid black;*/
+  }
+
+  .wrapper-logotype img {
+    width: 140px;
+    height: auto;
+  }
+
+  /*.wrapper-food-list {
+    justify-content: space-around;
+    margin-right: 0;
+  }*/
+
+  .navigation-top-trigger {
+    position: absolute;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border: none;
+    background: none;
+  }
+
+  .navigation-top-trigger > span {
+    position: relative;
+    display: block;
+    right: 0;
+    width: 30px;
+    height: 5px;
+    margin: 0 auto;
+    background: black;
+  }
+
+  .navigation-top-trigger > span:before,
+  .navigation-top-trigger > span:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: black;
+  }
+
+  .navigation-top-trigger > span:before {
+    top: -10px;
+  }
+
+  .navigation-top-trigger > span:after {
+    top: 10px;
+  }
+
+  .menu-dropdown {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    display: none;
+    min-width: 320px;
+    padding-top: 15px;
+    padding-right: 16px;
+    padding-left: 16px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgba(45,45,68,.97);
+  }
+
+/*----- Делаем страницу заказа для мобильной версии ------*/
+
+  #step-1:checked ~ .step-item {
+    min-height: 50px;
+  }
+
+  .wrapper-form {
+    min-height: 100px;
+  }
+
+  .button-next-step,
+  .button-prev-step {
+    display: none;
+  }
+
+  .wrapper-step-item-header {
+    margin-top: 20px;
+    min-height: 20px;
+  }
+
+  .step-item-header {
+    font-size: 24px;
+  }
+
+  .wrapper-overflow {
+    /*display: block;*/
+    min-height: 100px;
+    overflow: visible;
+  }
+
+  .step-item {
+    display: block;
+    min-height: 50px;
+    margin-bottom: 10px;
+    outline: 1px solid black;
+  }
+
+  .wrapper-column-menu {
+    display: inline-block;
+    text-align: center;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(auto-fill, 250px); !* или repeat(auto-fit, 100px); *!*/
+    /*justify-content: center; !* или space-between, или space-evenly, можно и space-around *!*/
+    /*height: auto;*/
+  }
+
+  /*.column-menu-item {*/
+    /*display: inline-block;*/
+    /*!*width: 100%;*!*/
+    /*min-height: 50px;*/
+    /*white-space: normal;*/
+    /*!*outline: 1px solid green;*!*/
+  /*}*/
+
+  .menu-item-card {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    text-align: center;
+    white-space: nowrap;
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 502px) {
+  .input-label {
+    /*text-align: center;*/
+  }
+}
